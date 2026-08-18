@@ -81,22 +81,37 @@
 
     function resize() {
       const rect = canvas.getBoundingClientRect();
-      w = rect.width;
-      h = rect.height;
+      const nw = rect.width;
+      const nh = rect.height;
+      if (nw === 0 || nh === 0) return;
       const scale = dpr();
-      canvas.width = Math.round(w * scale);
-      canvas.height = Math.round(h * scale);
+      canvas.width = Math.round(nw * scale);
+      canvas.height = Math.round(nh * scale);
       ctx.setTransform(scale, 0, 0, scale, 0, 0);
 
-      const count = Math.max(34, Math.min(90, Math.floor((w * h) / 16000)));
-      dots = Array.from({ length: count }, () => ({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        r: Math.random() < 0.28 ? Math.random() * 2 + 1.6 : Math.random() * 1 + 0.4,
-        accent: Math.random() < 0.24,
-      }));
+      const count = Math.max(34, Math.min(90, Math.floor((nw * nh) / 16000)));
+      if (dots.length === count) {
+        // keep existing dots, rescale positions instead of re-seeding
+        if (w > 0 && h > 0) {
+          const sx = nw / w;
+          const sy = nh / h;
+          for (const d of dots) {
+            d.x *= sx;
+            d.y *= sy;
+          }
+        }
+      } else {
+        dots = Array.from({ length: count }, () => ({
+          x: Math.random() * nw,
+          y: Math.random() * nh,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          r: Math.random() < 0.28 ? Math.random() * 2 + 1.6 : Math.random() * 1 + 0.4,
+          accent: Math.random() < 0.24,
+        }));
+      }
+      w = nw;
+      h = nh;
     }
 
     function step() {
@@ -177,7 +192,19 @@
 
     canvas.addEventListener("pointermove", onMove, { passive: true });
     canvas.addEventListener("pointerleave", onLeave);
-    window.addEventListener("resize", resize);
+
+    let resizeTimer = 0;
+    const onResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        resize();
+        if (prefersReducedMotion) {
+          step();
+          cancelAnimationFrame(raf);
+        }
+      }, 120);
+    };
+    window.addEventListener("resize", onResize);
 
     resize();
 
@@ -191,7 +218,8 @@
     step();
     return () => {
       cancelAnimationFrame(raf);
-      window.removeEventListener("resize", resize);
+      clearTimeout(resizeTimer);
+      window.removeEventListener("resize", onResize);
     };
   }
 
