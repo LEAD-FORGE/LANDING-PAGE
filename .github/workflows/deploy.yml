@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Desplegar en Firebase Hosting
-        uses: w9jds/firebase-action@v13
+        uses: w9jds/firebase-action@v15.24.0
         with:
           args: deploy --only hosting --project lead-forge-e1116
         env:
