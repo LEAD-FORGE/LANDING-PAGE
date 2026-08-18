@@ -1,0 +1,22 @@
+name: Deploy a Firebase Hosting
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Desplegar en Firebase Hosting
+        uses: w9jds/firebase-action@v13
+        with:
+          args: deploy --only hosting --project lead-forge-e1116
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
