@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>LEAD Forge · Construye lo que sigue. | Club Universitario de Innovación y Tecnología</title>
+  <meta name="description" content="LEAD Forge es el club universitario de innovación y tecnología de LEAD University. Un espacio abierto para que los estudiantes construyan, experimenten y conecten alrededor de IA, datos, software, innovación y emprendimiento." />
+  <meta name="keywords" content="LEAD Forge, LEAD University, Costa Rica, club universitario, tecnología, IA, ciencia de datos, software, innovación, emprendimiento, hackatones" />
+  <meta name="author" content="LEAD Forge" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#21211F" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="canonical" href="https://leadforgecr.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LEAD Forge" />
+  <meta property="og:title" content="LEAD Forge · Construye lo que sigue." />
+  <meta property="og:description" content="El club universitario de innovación y tecnología de LEAD University. Construye, experimenta y conecta alrededor de IA, datos, software y emprendimiento." />
+  <meta property="og:url" content="https://leadforgecr.com/" />
+  <meta property="og:locale" content="es_CR" />
+  <meta property="og:image" content="https://leadforgecr.com/assets/img/hero-visual.svg" />
+  <meta property="og:image:width" content="1400" />
+  <meta property="og:image:height" content="1000" />
+  <meta property="og:image:alt" content="Visual de la red mesh de LEAD Forge" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LEAD Forge · Construye lo que sigue." />
+  <meta name="twitter:description" content="El club universitario de innovación y tecnología de LEAD University. IA · Datos · Software · Innovación · Emprendimiento." />
+  <meta name="twitter:image" content="https://leadforgecr.com/assets/img/hero-visual.svg" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="any" href="LOGO LEAD FORGE.png" />
+  <link rel="apple-touch-icon" href="LOGO LEAD FORGE.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LEAD Forge",
+    "alternateName": "Club Universitario de Innovación y Tecnología",
+    "url": "https://leadforgecr.com/",
+    "logo": "https://leadforgecr.com/LOGO%20LEAD%20FORGE.png",
+    "description": "Club de innovación y tecnología de LEAD University. Construye, experimenta y conecta.",
+    "slogan": "Construye lo que sigue.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San José",
+      "addressCountry": "CR"
+    },
+    "sameAs": [
+      "https://www.instagram.com/lead_forge_cr",
+      "https://www.linkedin.com/company/lead-forge-cr/",
+      "https://github.com/LEAD-FORGE"
+    ]
+  }
+  </script>
+</head>
+
+<body data-theme="dark">
+
+  <!-- Background layer: global grid -->
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__brand" aria-label="LEAD Forge inicio">
+        <img src="LOGO LEAD FORGE.png" alt="Logo LEAD Forge" class="nav__logo" width="180" height="60" />
+        <span class="nav__brandtext">FORGE<span class="accent-dot">.</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#about">About</a>
+        <a href="eventos.html">Events</a>
+        <a href="socials.html">Socials</a>
+      </nav>
+      <div class="nav__end">
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+          <button class="lang-switch__btn is-active" data-lang="es" aria-label="Español">ES</button>
+          <span class="lang-switch__sep">/</span>
+          <button class="lang-switch__btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+        <a href="#join" class="btn btn--sm btn--accent nav__cta" data-i18n="nav.cta">Únete a LEAD Forge →</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="hero">
+      <canvas class="hero__mesh" id="meshHero" aria-hidden="true"></canvas>
+      <div class="container hero__inner">
+        <p class="code-line reveal accent-text" data-i18n="hero.code">club universitario de innovación y tecnología</p>
+        <h1 class="hero__title reveal" data-delay="1">
+          <span class="hero__brand">LEAD Forge</span>
+          <span class="hero__tag" data-i18n="hero.tag">Construye lo que sigue<span class="accent-dot">.</span></span>
+        </h1>
+        <p class="hero__lede reveal" data-delay="2" data-i18n="hero.lede">
+          El espacio abierto de <strong>LEAD University</strong> para estudiantes que quieren <em>construir</em>,
+          <em>experimentar</em> y <em>conectar</em> alrededor de la tecnología y la innovación.
+        </p>
+        <div class="hero__cta reveal" data-delay="3">
+          <a href="#join" class="btn btn--accent" data-i18n="hero.ctaPrimary">Únete a LEAD Forge →</a>
+          <a href="#projects" class="btn btn--ghost" data-i18n="hero.ctaSecondary">Explorar Proyectos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Status strip -->
+    <div class="statusbar">
+      <div class="container statusbar__inner">
+        <span class="statusbar__item" data-i18n="status.univ">Universidad: LEAD University</span>
+        <span class="statusbar__item" data-i18n="status.loc">Ubicación: Costa Rica</span>
+        <span class="statusbar__item"><span data-i18n="status.members">Miembros:</span> <strong id="membersCount">-</strong></span>
+      </div>
+    </div>
+
+    <!-- ================= KEYS ================= -->
+    <section class="keys" aria-label="Cómo funciona la forja">
+      <div class="container">
+        <div class="keys__grid">
+          <div class="key reveal"><span class="key__num">01</span><span class="key__label" data-i18n="keys.k1">CONSTRUIR</span><span class="key__bar"><i></i></span></div>
+          <div class="key reveal" data-delay="1"><span class="key__num">02</span><span class="key__label" data-i18n="keys.k2">EXPERIMENTAR</span><span class="key__bar"><i></i></span></div>
+          <div class="key reveal" data-delay="2"><span class="key__num">03</span><span class="key__label" data-i18n="keys.k3">LANZAR</span><span class="key__bar"><i></i></span></div>
+          <div class="key reveal" data-delay="3"><span class="key__num">04</span><span class="key__label" data-i18n="keys.k4">CONECTAR</span><span class="key__bar"><i></i></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 01 QUÉ CONSTRUIMOS ================= -->
+    <section class="section" id="build">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__index" data-i18n="build.index">01 · QUÉ CONSTRUIMOS</p>
+          <h2 class="section__title" data-i18n="build.title">Disciplinas que forjamos</h2>
+          <p class="section__sub" data-i18n="build.sub">Cinco pistas, un club. Elige una · o combínalas.</p>
+        </div>
+
+        <div class="tracks">
+          <article class="track reveal">
+            <div class="track__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 5v6M7.5 18.3l3-3M16.5 18.3l-3-3M12 11l-5 4M12 11l5 4"/></svg>
+            </div>
+            <h3 data-i18n="build.t1">IA</h3>
+            <p data-i18n="build.t1d">Modelos de lenguaje, agentes, visión por computadora y aprendizaje automático aplicado.</p>
+            <span class="track__meta">ml.repo // activo</span>
+          </article>
+
+          <article class="track reveal" data-delay="1">
+            <div class="track__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4h18v14H3z"/><path d="M3 16l6-5 4 3 8-8"/><path d="M8 8h.01M16 8h.01"/></svg>
+            </div>
+            <h3 data-i18n="build.t2">DATOS</h3>
+            <p data-i18n="build.t2d">Analítica, pipelines de datos y visualizaciones que cuentan la historia real.</p>
+            <span class="track__meta">data.frame // vivo</span>
+          </article>
+
+          <article class="track reveal" data-delay="2">
+            <div class="track__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l6 8-6 8M12 20h8"/></svg>
+            </div>
+            <h3 data-i18n="build.t3">SOFTWARE</h3>
+            <p data-i18n="build.t3d">Ingeniería full-stack, código abierto y productos que llegan a producción.</p>
+            <span class="track__meta">npm run ship</span>
+          </article>
+
+          <article class="track reveal" data-delay="3">
+            <div class="track__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.6 7H22l-5.5 4.3L18.5 21 12 17l-6.5 4 2-7.7L2 9h7.4z"/></svg>
+            </div>
+            <h3 data-i18n="build.t4">INNOVACIÓN</h3>
+            <p data-i18n="build.t4d">Design sprints, conceptos nuevos y experimentos tipo I+D.</p>
+            <span class="track__meta">prototipo.v1</span>
+          </article>
+
+          <article class="track reveal" data-delay="4">
+            <div class="track__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="4"/></svg>
+            </div>
+            <h3 data-i18n="build.t5">EMPRENDIMIENTO</h3>
+            <p data-i18n="build.t5d">Personas que convierten prototipos en startups y proyectos reales.</p>
+            <span class="track__meta">venture.seed</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 02 LA FORJA ================= -->
+    <section class="section section--forge" id="the-forge">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__index" data-i18n="forge.index">02 · LA FORJA</p>
+          <h2 class="section__title" data-i18n="forge.title">La filosofía</h2>
+        </div>
+
+        <div class="forge">
+          <div class="forge__visual reveal">
+            <figure class="frame frame--img">
+              <img src="assets/estudiantes_universidad.jpg" alt="Estudiantes de LEAD University colaborando" loading="lazy" />
+              <figcaption>estudiantes.lead /// hacer</figcaption>
+            </figure>
+            <figure class="frame frame--img forge__visual--extra">
+              <img src="assets/universidad.avif" alt="Campus de LEAD University" loading="lazy" />
+              <figcaption>campus.lead /// costa rica</figcaption>
+            </figure>
+          </div>
+
+          <div class="forge__body">
+            <blockquote class="forge__quote reveal" data-i18n="forge.quote">
+              Las ideas valen poco.<br />
+              <span class="accent-text">Construir se da en la forja.</span>
+            </blockquote>
+            <p class="reveal" data-i18n="forge.p">
+              LEAD Forge no es solo un club de charlas. Es un lugar para crear <strong>proyectos reales</strong>,
+              aprender haciendo y convertir ideas en prototipos · en equipo, con mentores y con resultados.
+            </p>
+
+            <div class="terminal reveal" aria-label="Filosofía de la forja">
+              <div class="terminal__bar">
+                <span class="terminal__dot"></span><span class="terminal__dot"></span><span class="terminal__dot"></span>
+                <span class="terminal__title">forge.sh</span>
+              </div>
+              <div class="terminal__body">
+                <p><span class="terminal__prompt">$</span><span data-i18n="forge.term1">cargar idea --sin_filtrar</span></p>
+                <p><span class="terminal__prompt">$</span><span data-i18n="forge.term2">construir prototipo </span><span class="term-accent" data-i18n="forge.term2a">→ listo</span></p>
+                <p><span class="terminal__prompt">$</span><span data-i18n="forge.term3">probar con usuarios reales</span></p>
+                <p><span class="terminal__prompt">$</span><span data-i18n="forge.term4">lanzar </span><span class="term-accent" data-i18n="forge.term4a">→ al mundo</span></p>
+                <p><span class="terminal__prompt">$</span><span data-i18n="forge.term5">conectar + repetir </span><span class="cursor">▊</span></p>
+              </div>
+            </div>
+
+            <a href="#join" class="btn btn--ghost reveal" data-i18n="forge.btn">Empezar a construir →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= THE CLUB (magnitud) ================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__index" data-i18n="about.index">EL CLUB</p>
+          <h2 class="section__title" data-i18n="about.title">Más que un club. Un espacio para crecer.</h2>
+          <p class="section__sub" data-i18n="about.sub">LEAD Forge es donde estudiantes de todas las carreras de LEAD University se encuentran para construir tecnología que importa · y crecer en portafolio, red y mentalidad más allá del campus.</p>
+        </div>
+
+        <div class="about">
+          <figure class="frame frame--img about__visual reveal">
+            <img src="LEAD Forge BANNER.png" alt="Banner de LEAD Forge · la identidad visual del club" loading="lazy" />
+            <figcaption>@lead_forge_cr · Costa Rica</figcaption>
+          </figure>
+
+          <dl class="stats reveal">
+            <div class="stat"><dt id="statSpark">0</dt><dd>Spark Sessions</dd></div>
+            <div class="stat"><dt id="statLabs">0</dt><dd>Forge Labs</dd></div>
+            <div class="stat"><dt id="statIgnite">0</dt><dd>Ignite &amp; Connect</dd></div>
+            <div class="stat"><dt id="statHack">0</dt><dd>ForgeHack</dd></div>
+            <div class="stat"><dt id="statDemo">0</dt><dd>Demo Days</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 03 ECOSISTEMA ================= -->
+    <section class="section section--ecosys" id="ecosystem">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__index" data-i18n="ecosys.index">03 · ECOSISTEMA DEL CLUB</p>
+          <h2 class="section__title" data-i18n="ecosys.title">Actividades del club</h2>
+          <p class="section__sub" data-i18n="ecosys.sub">Cinco tipos de actividades, cada uno con su propia identidad. Así se vive LEAD Forge.</p>
+        </div>
+
+        <div class="ecosys__grid">
+          <article class="ecosys-card reveal">
+            <figure class="frame frame--img"><img src="assets/ECOSISTEMA_DEL_CLUB_ICONS/Spark Sessions.png" alt="Icono de Spark Sessions · charlas" loading="lazy" /></figure>
+            <div class="ecosys-card__body">
+              <p class="ecosys-card__tag mono" data-i18n="ecosys.c1t">Charlas</p>
+              <h3 data-i18n="ecosys.c1n">Spark Sessions</h3>
+              <p data-i18n="ecosys.c1d">Conferencias con profesionales de la industria que acercan el mundo real y las tendencias del sector.</p>
+            </div>
+          </article>
+
+          <article class="ecosys-card reveal" data-delay="1">
+            <figure class="frame frame--img"><img src="assets/ECOSISTEMA_DEL_CLUB_ICONS/Forge Labs.png" alt="Icono de Forge Labs · talleres" loading="lazy" /></figure>
+            <div class="ecosys-card__body">
+              <p class="ecosys-card__tag mono" data-i18n="ecosys.c2t">Talleres</p>
+              <h3 data-i18n="ecosys.c2n">Forge Labs</h3>
+              <p data-i18n="ecosys.c2d">Sesiones hands-on de IA, cloud y software moderno donde se aprende haciendo.</p>
+            </div>
+          </article>
+
+          <article class="ecosys-card reveal" data-delay="2">
+            <figure class="frame frame--img"><img src="assets/ECOSISTEMA_DEL_CLUB_ICONS/Ignite &amp; Connect.png" alt="Icono de Ignite &amp; Connect · networking" loading="lazy" /></figure>
+            <div class="ecosys-card__body">
+              <p class="ecosys-card__tag mono" data-i18n="ecosys.c3t">Networking</p>
+              <h3 data-i18n="ecosys.c3n">Ignite &amp; Connect</h3>
+              <p data-i18n="ecosys.c3d">Espacios para conocerse, formar equipos y construir tu red de contactos dentro y fuera del club.</p>
+            </div>
+          </article>
+
+          <article class="ecosys-card reveal" data-delay="3">
+            <figure class="frame frame--img"><img src="assets/ECOSISTEMA_DEL_CLUB_ICONS/ForgeHack.png" alt="Icono de ForgeHack · hackatones" loading="lazy" /></figure>
+            <div class="ecosys-card__body">
+              <p class="ecosys-card__tag mono" data-i18n="ecosys.c4t">Hackatones</p>
+              <h3 data-i18n="ecosys.c4n">ForgeHack</h3>
+              <p data-i18n="ecosys.c4d">Competencias intensivas donde las ideas se convierten en demos funcionales en pocas horas.</p>
+            </div>
+          </article>
+
+          <article class="ecosys-card reveal" data-delay="4">
+            <figure class="frame frame--img"><img src="assets/ECOSISTEMA_DEL_CLUB_ICONS/Demo Days.png" alt="Icono de Demo Days · exhibición de demos" loading="lazy" /></figure>
+            <div class="ecosys-card__body">
+              <p class="ecosys-card__tag mono" data-i18n="ecosys.c5t">Exhibición de demos</p>
+              <h3 data-i18n="ecosys.c5n">Demo Days</h3>
+              <p data-i18n="ecosys.c5d">Muestra abierta de los proyectos de los miembros para celebrar y compartir lo construido.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 04 PROYECTOS ================= -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__index" data-i18n="projects.index">04 · PROYECTOS</p>
+          <h2 class="section__title" data-i18n="projects.title">Proyectos en el horno</h2>
+          <p class="section__sub" data-i18n="projects.sub">Los proyectos de los miembros se publicarán aquí. Este es tu espacio para construir el primero.</p>
+        </div>
+
+        <div class="projects">
+          <figure class="frame frame--img project__media reveal"><img src="assets/img/projects/project-1.svg" alt="Espacio reservado para el primer proyecto de un miembro" loading="lazy" /><figcaption class="project__soon">SLOT 01</figcaption></figure>
+          <figure class="frame frame--img project__media reveal" data-delay="1"><img src="assets/img/projects/project-2.svg" alt="Espacio reservado para un proyecto" loading="lazy" /><figcaption class="project__soon">SLOT 02</figcaption></figure>
+          <figure class="frame frame--img project__media reveal" data-delay="2"><img src="assets/img/projects/project-3.svg" alt="Espacio reservado para un proyecto" loading="lazy" /><figcaption class="project__soon">SLOT 03</figcaption></figure>
+          <figure class="frame frame--img project__media reveal" data-delay="3"><img src="assets/img/projects/project-4.svg" alt="Espacio reservado para un proyecto" loading="lazy" /><figcaption class="project__soon">SLOT 04</figcaption></figure>
+          <figure class="frame frame--img project__media reveal" data-delay="4"><img src="assets/img/projects/project-5.svg" alt="Espacio reservado para un proyecto" loading="lazy" /><figcaption class="project__soon">SLOT 05</figcaption></figure>
+          <figure class="frame frame--img project__media reveal" data-delay="5"><img src="assets/img/projects/project-6.svg" alt="Espacio reservado para un proyecto" loading="lazy" /><figcaption class="project__soon">SLOT 06</figcaption></figure>
+        </div>
+
+        <p class="projects__note mono reveal" data-i18n="projects.note">// tus ideas tienen su slot reservado. forja la primera.</p>
+      </div>
+    </section>
+
+    <!-- ================= 05 COMUNIDAD ================= -->
+    <section class="section section--community" id="community">
+      <canvas class="community__mesh" id="meshCommunity" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__index" data-i18n="community.index">05 · COMUNIDAD</p>
+          <h2 class="section__title section__title--big" data-i18n="community.title">Mentes distintas.<br />Un solo equipo<span class="accent-dot">.</span></h2>
+          <p class="section__sub" data-i18n="community.sub">LEAD Forge es una red, no solo una organización. Conecta estudiantes de distintas carreras e intereses para colaborar en proyectos tecnológicos reales.</p>
+        </div>
+
+        <div class="community">
+          <div class="members" id="members">
+            <div class="members__track" id="membersTrack">
+
+              <div class="member">
+                <article class="member__card">
+                  <img class="member__photo" src="assets/fotos_pfp_members/diego.jpeg" alt="Diego Díaz Montero" loading="lazy" />
+                  <div class="member__meta">
+                    <p class="member__role mono" data-i18n="members.1role">DATA SCIENCE & AI ARCHITECT · FUNDADOR DE LEAD FORGE</p>
+                    <h3 class="member__name" data-i18n="members.1name">Diego Díaz Montero</h3>
+                    <p class="member__bio" data-i18n="members.1bio">Data Science & AI Architect de Heredia, 19 años, estudiante del B.S. en Data Science & AI en LEAD University. Fundador de NTK Solutions y cofundador de MIMIC, construye soluciones de datos, IA y automatización.</p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="member">
+                <article class="member__card">
+                  <img class="member__photo" src="assets/fotos_pfp_members/maroto.jpeg" alt="Julián Maroto" loading="lazy" />
+                  <div class="member__meta">
+                    <p class="member__role mono" data-i18n="members.2role">INGENIERÍA EN CIENCIA DE DATOS · COFUNDADOR DE LEAD FORGE</p>
+                    <h3 class="member__name" data-i18n="members.2name">Julián Maroto</h3>
+                    <p class="member__bio" data-i18n="members.2bio">Estudiante de Ingeniería en Ciencia de Datos y cofundador de LEAD Forge. Apasionado por la IA aplicada y Python: hackathons internacionales, certificaciones Azure AI y herramientas LLM.</p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="member">
+                <article class="member__card member__card--ghost">
+                  <div class="member__ghost mono">
+                    <p>SLOT 03</p>
+                    <p>tu foto aquí</p>
+                  </div>
+                  <div class="member__meta">
+                    <p class="member__role mono">PRÓXIMO MIEMBRO DESTACADO</p>
+                    <h3 class="member__name">Tu nombre aquí</h3>
+                    <p class="member__bio">// en construcción · únete al club y ocupa tu lugar en la forja.</p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="member">
+                <article class="member__card member__card--ghost">
+                  <div class="member__ghost mono">
+                    <p>SLOT 04</p>
+                    <p>tu foto aquí</p>
+                  </div>
+                  <div class="member__meta">
+                    <p class="member__role mono">PRÓXIMO MIEMBRO DESTACADO</p>
+                    <h3 class="member__name">Tu nombre aquí</h3>
+                    <p class="member__bio">// en construcción · únete al club y ocupa tu lugar en la forja.</p>
+                  </div>
+                </article>
+              </div>
+
+            </div>
+            <div class="members__nav">
+              <button class="members__arrow" id="membersPrev" type="button" aria-label="Anterior" aria-hidden="true">←</button>
+              <button class="members__arrow" id="membersNext" type="button" aria-label="Siguiente">→</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= JOIN ================= -->
+        <div class="join reveal" id="join">
+          <p class="code-line accent-text" data-i18n="join.code">forma parte del cambio</p>
+          <h2 class="join__title" data-i18n="join.title">Únete a LEAD Forge<span class="accent-dot">.</span></h2>
+          <p class="join__sub" data-i18n="join.sub">Cuéntanos qué quieres construir. Nosotros ponemos el fuego, las herramientas y las personas.</p>
+          <div class="join__actions">
+            <a href="#join" class="btn btn--accent btn--lg" data-i18n="join.primary">Únete a LEAD Forge →</a>
+            <a href="#join" class="btn btn--ghost btn--lg" data-i18n="join.secondary">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="LOGO LEAD FORGE.png" alt="Logo LEAD Forge" class="footer__logo" width="220" height="80" loading="lazy" />
+        <p class="footer__name" data-i18n="footer.name">LEAD Forge</p>
+        <p class="footer__tagline" data-i18n="footer.tagline">Club Universitario de Innovación y Tecnología<br />LEAD University · Costa Rica</p>
+      </div>
+
+      <nav class="footer__links" aria-label="Footer">
+        <p class="footer__linkhead" data-i18n="footer.explore">Explorar</p>
+        <a href="#build" data-i18n="nav.build">Construir</a>
+        <a href="#the-forge" data-i18n="nav.forge">La Forja</a>
+        <a href="eventos.html" data-i18n="nav.events">Eventos</a>
+        <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="#community" data-i18n="nav.community">Comunidad</a>
+      </nav>
+
+      <div class="footer__social" id="socials">
+        <p class="footer__linkhead" data-i18n="footer.follow">Síguenos</p>
+        <a href="https://www.instagram.com/lead_forge_cr" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/company/lead-forge-cr/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/LEAD-FORGE" target="_blank" rel="noopener">GitHub</a>
+        <a href="#join" class="footer__join" data-i18n="footer.join">Únete →</a>
+      </div>
+    </div>
+    <div class="footer__signature" data-i18n="footer.sig">CONSTRUIDO POR ESTUDIANTES · PARA LA PRÓXIMA GENERACIÓN</div>
+  </footer>
+
+  <script src="config.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+</body>
+</html>

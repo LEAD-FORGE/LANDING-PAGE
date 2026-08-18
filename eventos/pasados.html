@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventos pasados · LEAD Forge</title>
+  <meta name="description" content="Archivo de eventos pasados de LEAD Forge: registro de cada actividad, cobertura y resultados. Por ahora el historial está en construcción." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#21211F" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="canonical" href="https://leadforgecr.com/eventos/pasados.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LEAD Forge" />
+  <meta property="og:title" content="Eventos pasados · LEAD Forge" />
+  <meta property="og:description" content="Historial de cada evento del club: cobertura, fotos y qué se construyó." />
+  <meta property="og:url" content="https://leadforgecr.com/eventos/pasados.html" />
+  <meta property="og:locale" content="es_CR" />
+  <meta property="og:image" content="https://leadforgecr.com/assets/img/hero-visual.svg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Eventos pasados · LEAD Forge" />
+  <meta name="twitter:description" content="Cobertura, fotos y resultados de cada actividad pasada del club." />
+  <meta name="twitter:image" content="https://leadforgecr.com/assets/img/hero-visual.svg" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="any" href="../LOGO LEAD FORGE.png" />
+  <link rel="apple-touch-icon" href="../LOGO LEAD FORGE.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body data-theme="dark">
+
+  <!-- Background layer: global grid -->
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__brand" aria-label="LEAD Forge inicio">
+        <img src="../LOGO LEAD FORGE.png" alt="Logo LEAD Forge" class="nav__logo" width="180" height="60" />
+        <span class="nav__brandtext">FORGE<span class="accent-dot">.</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="../index.html#about">About</a>
+        <a href="../eventos.html" class="is-active">Events</a>
+        <a href="../socials.html">Socials</a>
+      </nav>
+      <div class="nav__end">
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+          <button class="lang-switch__btn is-active" data-lang="es" aria-label="Español">ES</button>
+          <span class="lang-switch__sep">/</span>
+          <button class="lang-switch__btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+        <a href="../index.html#join" class="btn btn--sm btn--accent nav__cta" data-i18n="nav.cta">Únete a LEAD Forge →</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ================= ARCHIVO ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head reveal" style="margin-top:1rem;">
+          <p class="section__index" data-i18n="past.index">ARCHIVO</p>
+          <h1 class="section__title" data-i18n="past.title">Eventos pasados</h1>
+          <p class="section__sub" data-i18n="past.sub">El historial del club, registro a registro: cada evento que ocurra quedará documentado aquí, con cobertura, fotos y resultados.</p>
+        </div>
+
+        <div class="arch reveal">
+          <div class="arch__slot">
+            <p class="arch__code mono" data-i18n="past.code">// historial.arch · vacío</p>
+            <h2 data-i18n="past.emptyT">El archivo está tomando forma</h2>
+            <p data-i18n="past.emptyD">Todavía no hay eventos pasados: la primera generación del club se enciende con el Lighting de Forge. Cuando un evento termine, aquí aparecerá su registro completo.</p>
+            <div class="arch__timeline">
+              <div class="arch__row"><span>SLOT · 01</span><small data-i18n="past.row">Sin evento aún</small></div>
+              <div class="arch__row"><span>SLOT · 02</span><small data-i18n="past.row">Sin evento aún</small></div>
+              <div class="arch__row"><span>SLOT · 03</span><small data-i18n="past.row">Sin evento aún</small></div>
+            </div>
+            <a href="../eventos.html" class="btn btn--ghost" data-i18n="past.back">← Volver a eventos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= JOIN ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="join reveal" id="join">
+          <p class="code-line" data-i18n="join.code">forma parte del cambio</p>
+          <h2 class="join__title" data-i18n="join.title">Únete a LEAD Forge<span class="accent-dot">.</span></h2>
+          <p class="join__sub" data-i18n="join.sub">Cuéntanos qué quieres construir. Nosotros ponemos el fuego, las herramientas y las personas.</p>
+          <div class="join__actions">
+            <a href="../index.html#join" class="btn btn--accent btn--lg" data-i18n="join.primary">Únete a LEAD Forge →</a>
+            <a href="../eventos.html" class="btn btn--ghost btn--lg" data-i18n="evpage.explore">Ver eventos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="../LOGO LEAD FORGE.png" alt="Logo LEAD Forge" class="footer__logo" width="220" height="80" loading="lazy" />
+        <p class="footer__name" data-i18n="footer.name">LEAD Forge</p>
+        <p class="footer__tagline" data-i18n="footer.tagline">Club Universitario de Innovación y Tecnología<br />LEAD University · Costa Rica</p>
+      </div>
+
+      <nav class="footer__links" aria-label="Footer">
+        <p class="footer__linkhead" data-i18n="footer.explore">Explorar</p>
+        <a href="../index.html#about">About</a>
+        <a href="../eventos.html">Events</a>
+        <a href="pasados.html" data-i18n="footer.past">Eventos pasados</a>
+        <a href="../index.html#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="../index.html#community" data-i18n="nav.community">Comunidad</a>
+      </nav>
+
+      <div class="footer__social" id="socials">
+        <p class="footer__linkhead" data-i18n="footer.follow">Síguenos</p>
+        <a href="https://www.instagram.com/lead_forge_cr" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/company/lead-forge-cr/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/LEAD-FORGE" target="_blank" rel="noopener">GitHub</a>
+        <a href="../index.html#join" class="footer__join" data-i18n="footer.join">Únete →</a>
+      </div>
+    </div>
+    <div class="footer__signature" data-i18n="footer.sig">CONSTRUIDO POR ESTUDIANTES · PARA LA PRÓXIMA GENERACIÓN</div>
+  </footer>
+
+  <script src="../config.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/i18n.js" defer></script>
+</body>
+</html>
