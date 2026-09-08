@@ -81,24 +81,23 @@
 
     function resize() {
       const rect = canvas.getBoundingClientRect();
-      const nw = rect.width;
-      const nh = rect.height;
+      const nw = Math.round(rect.width);
+      const nh = Math.round(rect.height);
       if (nw === 0 || nh === 0) return;
+      if (nw === w && nh === h && canvas.width === Math.round(nw * dpr())) return;
+
       const scale = dpr();
       canvas.width = Math.round(nw * scale);
       canvas.height = Math.round(nh * scale);
       ctx.setTransform(scale, 0, 0, scale, 0, 0);
 
       const count = Math.max(34, Math.min(90, Math.floor((nw * nh) / 16000)));
-      if (dots.length === count) {
-        // keep existing dots, rescale positions instead of re-seeding
-        if (w > 0 && h > 0) {
-          const sx = nw / w;
-          const sy = nh / h;
-          for (const d of dots) {
-            d.x *= sx;
-            d.y *= sy;
-          }
+      if (dots.length === count && w > 0 && h > 0) {
+        const sx = nw / w;
+        const sy = nh / h;
+        for (const d of dots) {
+          d.x *= sx;
+          d.y *= sy;
         }
       } else {
         dots = Array.from({ length: count }, () => ({
@@ -121,7 +120,6 @@
         d.x += d.vx;
         d.y += d.vy;
 
-        // gentle attraction toward the cursor
         const dx = mouse.x - d.x;
         const dy = mouse.y - d.y;
         const dist = Math.hypot(dx, dy);
@@ -131,14 +129,12 @@
           d.y += dy / dist * pull;
         }
 
-        // wrap edges
         if (d.x < -20) d.x = w + 20;
         if (d.x > w + 20) d.x = -20;
         if (d.y < -20) d.y = h + 20;
         if (d.y > h + 20) d.y = -20;
       }
 
-      // node dots
       for (const d of dots) {
         ctx.beginPath();
         ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
@@ -150,7 +146,6 @@
         ctx.globalAlpha = 1;
       }
 
-      // proximity lines
       for (let i = 0; i < dots.length; i++) {
         for (let k = i + 1; k < dots.length; k++) {
           const a = dots[i];
@@ -180,18 +175,27 @@
       return dx * dx + dy * dy;
     }
 
+    const target = canvas.parentElement || window;
     function onMove(e) {
       const rect = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
+      const px = e.clientX - rect.left;
+      const py = e.clientY - rect.top;
+      if (px >= -60 && px <= rect.width + 60 && py >= -60 && py <= rect.height + 60) {
+        mouse.x = px;
+        mouse.y = py;
+      } else {
+        onLeave();
+      }
     }
     function onLeave() {
       mouse.x = -9999;
       mouse.y = -9999;
     }
 
-    canvas.addEventListener("pointermove", onMove, { passive: true });
-    canvas.addEventListener("pointerleave", onLeave);
+    target.addEventListener("pointermove", onMove, { passive: true });
+    target.addEventListener("pointerleave", onLeave);
+    window.addEventListener("touchend", onLeave, { passive: true });
+    window.addEventListener("touchcancel", onLeave, { passive: true });
 
     let resizeTimer = 0;
     const onResize = () => {
@@ -202,14 +206,31 @@
           step();
           cancelAnimationFrame(raf);
         }
-      }, 120);
+      }, 50);
     };
+
+    let ro = null;
+    if ("ResizeObserver" in window) {
+      ro = new ResizeObserver(() => {
+        resize();
+        if (prefersReducedMotion) {
+          step();
+          cancelAnimationFrame(raf);
+        }
+      });
+      ro.observe(canvas);
+    }
+
     window.addEventListener("resize", onResize);
+    window.addEventListener("orientationchange", onResize);
+    window.addEventListener("load", onResize);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(onResize);
+    }
 
     resize();
 
     if (prefersReducedMotion) {
-      // static render, no animation loop
       step();
       cancelAnimationFrame(raf);
       return;
@@ -219,7 +240,14 @@
     return () => {
       cancelAnimationFrame(raf);
       clearTimeout(resizeTimer);
+      if (ro) ro.disconnect();
       window.removeEventListener("resize", onResize);
+      window.removeEventListener("orientationchange", onResize);
+      window.removeEventListener("load", onResize);
+      target.removeEventListener("pointermove", onMove);
+      target.removeEventListener("pointerleave", onLeave);
+      window.removeEventListener("touchend", onLeave);
+      window.removeEventListener("touchcancel", onLeave);
     };
   }
 
