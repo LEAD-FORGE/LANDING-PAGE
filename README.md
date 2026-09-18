@@ -81,10 +81,12 @@ node --check js/i18n.js
 ├── socials.html                # linktree de redes
 ├── 404.html                    # página de error on-brand
 ├── eventos/                    # páginas por evento
-│   ├── lighting-de-forge.html
 │   ├── forgehack-nasa-space-apps.html
 │   ├── spark-session.html
-│   └── pasados.html            # archivo de eventos pasados
+│   ├── pasados.html            # archivo de eventos pasados
+│   └── pasados/
+│       ├── lighting-de-forge.html           # registro + galería del evento pasado
+│       └── fotos-lighting-de-forge/         # material oficial del evento (web/ con fotos optimizadas)
 ├── css/style.css               # design system completo
 ├── js/
 │   ├── main.js                 # mesh, reveal, nav, carrusel, parallax

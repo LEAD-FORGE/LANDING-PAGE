@@ -323,6 +323,22 @@
   }
 
   /* ============================================================
+     PAST ACTIVITIES CAROUSEL (scroll-snap + arrows)
+     ============================================================ */
+  const pastTrack = document.getElementById("pastTrack");
+  if (pastTrack) {
+    const prev = document.getElementById("pastPrev");
+    const next = document.getElementById("pastNext");
+    const gap = parseFloat(getComputedStyle(pastTrack).gap) || 0;
+    const step = () => {
+      const card = pastTrack.querySelector(".past-card");
+      return card ? card.getBoundingClientRect().width + gap : pastTrack.clientWidth;
+    };
+    if (prev) prev.addEventListener("click", () => pastTrack.scrollBy({ left: -step(), behavior: "smooth" }));
+    if (next) next.addEventListener("click", () => pastTrack.scrollBy({ left: step(), behavior: "smooth" }));
+  }
+
+  /* ============================================================
      HERO PARALLAX (subtle, pointer based)
      ============================================================ */
   const heroInner = document.querySelector(".hero__inner");

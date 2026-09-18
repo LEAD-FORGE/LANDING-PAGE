@@ -69,17 +69,9 @@
     "events.title": "The quarter's calendar",
     "events.sub":
       "Three main milestones, one global hackathon and an ecosystem of activities running all quarter long.",
-    "events.mSep": "SEP",
     "events.mOct": "OCT",
     "events.mNov": "NOV",
     "events.mDec": "DEC",
-    "events.e1tag": 'SAT 12 · SEP <span class="accent-text">●</span> KICKOFF',
-    "events.e1name": "Lighting de Forge",
-    "events.e1more": "Learn more →",
-    "events.e1desc":
-      "Official club kickoff: welcome, founding team, year vision and coffee & networking.",
-    "objects.e1":
-      "<li>Welcome and intro to LEAD Forge</li><li>Intro to the organizing team</li><li>Exclusive founding-member pin</li><li>Coffee & networking</li>",
     "events.e2tag": 'SAT 17 · OCT <span class="accent-text">●</span> HACKATHON',
     "events.e2name": "ForgeHack / NASA Space Apps",
     "events.e2more": "Learn more →",
@@ -132,12 +124,20 @@
     "past.title": "Past events",
     "past.sub":
       "The club's history, record by record: every event that happens will be documented here, with coverage, photos and results.",
-    "past.code": "// history.arch · empty",
-    "past.emptyT": "The archive is taking shape",
-    "past.emptyD":
-      "There are no past events yet: the club's first generation kicks off with the Lighting de Forge. Once an event ends, its full record will show up here.",
-    "past.row": "No event yet",
+    "past.done": "DONE",
+    "past.c1desc":
+      "The club's official kickoff: welcome, founding team, exclusive founding-member pin and coffee & networking. LEAD Forge's first generation fired up on September 12.",
+    "past.c1descLand":
+      "Official club kickoff: welcome, founding team, exclusive founding-member pin and coffee & networking.",
+    "past.view": "View event photos →",
+    "past.slotT": "NEXT RECORD",
+    "past.slotD": "When the next event wraps up, its coverage and photos will show up here.",
     "past.back": "← Back to events",
+
+    "pastAct.index": "06 · PAST ACTIVITIES",
+    "pastAct.title": "Past activities",
+    "pastAct.sub":
+      "A visual record of everything we've already lived: once an event ends, its best moments and photos stay here.",
 
     "ecosys.index": "03 · CLUB ECOSYSTEM",
     "ecosys.title": "Club activities",
