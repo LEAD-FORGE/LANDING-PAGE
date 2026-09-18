@@ -19,10 +19,10 @@
    Para desarrollo local también puedes editarlos a mano aquí.
    ============================================================ */
 window.SITE_CONFIG = {
-  members: 2,
+  members: 36,
   sparkSessions: 0,
   forgeLabs: 0,
-  igniteConnect: 0,
+  igniteConnect: 1,
   forgeHack: 0,
   demoDays: 0
 };
